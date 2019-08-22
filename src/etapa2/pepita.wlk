@@ -23,8 +23,10 @@ object pepita {
 	
 	method salirAComer() {
 		self.volar(5)		// "self" es una referencia al objeto que recibe el mensaje
-		// ... completar este metodo con las otra acciones sobre self
+		self.comer(alpiste,80)// ... completar este metodo con las otra acciones sobre self
+		self.volar(5)
 	}
+	
 	
 	method haceLoQueQuieras() { 
 		if (self.estaDebil()) {
@@ -32,7 +34,7 @@ object pepita {
 		// completar el método, de acuerdo a la estructura
 		// que se deja comentada aca abajo
 		} else if (self.estaFeliz()) {
-			//		
-		}
+			self.volar(8)
+			} 
 	}
 }

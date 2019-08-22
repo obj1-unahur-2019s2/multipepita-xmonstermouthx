@@ -34,7 +34,7 @@ object mijo {
 	
 	
 	
-object canelones {
+object canelones_versionmal {
 	var energiaPorGramo = 20
 	method energiaPorGramo() {return energiaPorGramo}
 	method ponerSalsa() {energiaPorGramo + 5}
@@ -42,6 +42,24 @@ object canelones {
 	method ponerQueso() {energiaPorGramo + 7}
 	method sacarQueso() {energiaPorGramo - 7}
 }
+
+
+
+object canelones {
+	var tieneQueso = false
+	var tieneSalsa = false
+	method ponerSalsa() {tieneSalsa = true}
+	method sacarSalsa() {tieneSalsa = false}
+	method ponerQueso() {tieneQueso = true}
+	method sacarQueso() {tieneQueso = false}
+	method energiaPorGramo() {
+		if (not tieneSalsa and not tieneQueso) {return 20}		
+		else if (tieneSalsa and not tieneQueso) {return 25}
+		else if (not tieneSalsa and tieneQueso) {return 27}
+		else {return 32}
+	}
+}
+	
 
 
 
